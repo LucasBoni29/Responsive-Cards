@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;     /* Ele ter como refência a borda da nossa caixa dos elementos. */
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #f6f9ff;
+    height: 100vh;     /* Altura total da nossa tela, do dispositivo que estamos utilizando no momento */
+    width: 100%;    /* Ocupar 100% da nossa tela em largura */
+
+    display: flex;
+    justify-content: center;    /* Pra alinhar os itens no Centro da tela, na horizontal */
+    align-items: center; /*  alinha os itens no centro da página */
+
+    color: #434343;   
+}
+main.cards {
+    display: flex;    /* O Display-flex por padrão deixa os elementos 1 do lado do outro, pq ele tem o flex-direction: row, por padrão -linha- */
+    flex-direction: row;     /* o row deixa em linha, mas o column deixa por coluna. O column-reverse troca de direção UP for Down ou inverso */
+    padding: 32px;     /* Se distanciar da parede */
+    height: 499px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main.cards section.card{
+    display: flex; /*Alinhando os elementos 1 em baixo do outro.*/
+    flex-direction: column; /*Os elementos 1 em baixo do outro.*/
+    align-items: center;
+    text-align: center; /*Quando quebrarmos o SPAM, o text-align vai juntar todos eles no centro.*/
+    background-color: white;
+    padding: 1rem 1.5rem; 
+    border-radius: 8px;
+    max-height: 500px; /*O Card não irá ultrapassar essa altura.*/
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child{
+    margin-left: 0;
+    
+}
+main.cards section.card.costa{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    margin-left: 0;
+    
+}
+main.cards section.card.priscilla{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+main.cards Section.card.tavares{
+   margin-top: 32px;
+}
+
+main.cards section.card .icon{  /*Como a imagem é filha do div.icon, o 100% do width ali em baixo vai fazer com q ocupe todo o tamanho disponivel dentro da div icon. Ocupar TUDO. */
+    width: 260px;
+    height: 260px;
+}
+main.cards section.card img{
+    width: 100%;
+}
+main.cards section.card h3{
+    font-size: 100%; /*Diminuindo o tamanho do título. Por padrão o nosso body tem o tamanho da fonte de 16px, então 100% é 16px, porque é o tamanho total.*/
+    margin: 16px 0;
+}
+main.cards section.card span{ /*Texto*/
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px; /*Tentando padronizar o titulo com o bottom*/
+}
+
+main.cards section.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase; /*Tudo maiusculo*/
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500; /*Peso da fonte. Nesse caso está deixando ela negrito.*/
+    color: white;
+} 
+main.cards section.card.contact button{
+    background: linear-gradient(to right, #9F66FF, #DFCBFF); /*Efeito gradiante. -estilo rgb-.*/
+}
+main.cards section.card.shop button{
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF); /*Efeito gradiante. -estilo rgb-.*/
+}
+main.cards section.card.about button{
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9); /*Efeito gradiante. -estilo rgb-.*/
+}
+main.cards section.card.contact{
+    box-shadow: 20px /*Eixo X*/ 20px /*Eixo Y*/ 50px /*De Bloear*/ -3px /*Esprede. Esprede é o deslocamento, dai se por negativo, vc
+    impede que vá muito para as laterais.*/ #DBC4FF;
+
+}
+main.cards section.card.shop{
+    box-shadow: 20px /*Eixo X*/ 20px /*Eixo Y*/ 50px /*De Bloear*/ -3px /*Esprede. Esprede é o deslocamento, dai se por negativo, vc
+    impede que vá muito para as laterais.*/ #AFD6FF;
+
+}
+main.cards section.card.about{
+    box-shadow: 20px /*Eixo X*/ 20px /*Eixo Y*/ 50px /*De Bloear*/ -3px /*Esprede. Esprede é o deslocamento, dai se por negativo, vc
+    impede que vá muito para as laterais.*/ #FFC1D5;
+}
+main.cards section.card.tavares button{
+    background: linear-gradient(to right, #9F66FF, #DFCBFF); /*Efeito gradiante. -estilo rgb-.*/
+}
+main.cards section.card.costa button{
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF); /*Efeito gradiante. -estilo rgb-.*/
+}
+main.cards section.card.priscilla button{
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9); /*Efeito gradiante. -estilo rgb-.*/
+}
+main.cards section.card.tavares{
+    box-shadow: 20px /*Eixo X*/ 20px /*Eixo Y*/ 50px /*De Bloear*/ -3px /*Esprede. Esprede é o deslocamento, dai se por negativo, vc
+    impede que vá muito para as laterais.*/ #DBC4FF;
+
+}
+main.cards section.card.costa{
+    box-shadow: 20px /*Eixo X*/ 20px /*Eixo Y*/ 50px /*De Bloear*/ -3px /*Esprede. Esprede é o deslocamento, dai se por negativo, vc
+    impede que vá muito para as laterais.*/ #AFD6FF;
+
+}
+main.cards section.card.priscilla{
+    box-shadow: 20px /*Eixo X*/ 20px /*Eixo Y*/ 50px /*De Bloear*/ -3px /*Esprede. Esprede é o deslocamento, dai se por negativo, vc
+    impede que vá muito para as laterais.*/ #FFC1D5;
+}
+
+/*Responsivo*/
+@media screen and (max-width: 720px) { /*Quando diminuir a tela e chegar no 720px, ele vai quebrar.*/
+    main.cards{
+        flex-direction: column;
+    }
+    main.cards section.card{
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+    main.cards section.card:last-child{
+        margin-bottom: 0; /*Removendo o margin bottom pq o ultimo não vai precisar.*/
+    }
+    main.cards section.card.about{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    main.cards section.card.costa{
+        margin-top: 0;
+    }
+    main.cards section.card.priscilla{
+        margin-top: 32px;
+    }
+}
